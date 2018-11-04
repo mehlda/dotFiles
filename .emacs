@@ -22,6 +22,7 @@
 
 (setq tab-width 4) ; or any other preferred value
 (setq-default c-basic-offset 4)
+(setq c-default-style "linux")
 
 (defun my-c-mode-hook ()
   (setq-default indent-tabs-mode nil)
@@ -57,9 +58,14 @@
 (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
       doom-themes-enable-italic t) ; if nil, italics is universally disabled
 
+;; Doom vibrant settings
+(setq doom-vibrant-comment-bg t
+      doom-vibrant-brighter-comments t)
+      
+
 ;; Load the theme (doom-one, doom-molokai, etc); keep in mind that each theme
 ;; may have their own settings.
-(load-theme 'doom-one t)
+(load-theme 'doom-vibrant t)
 
 ;; Enable flashing mode-line on errors
 (doom-themes-visual-bell-config)
