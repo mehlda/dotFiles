@@ -21,8 +21,10 @@
 
 (setq tab-width 4) ; or any other preferred value
 (setq-default c-basic-offset 4)
-(setq-default indent-tabs-mode nil)
-(infer-indentation-style)
+
+(defun my-c-mode-hook ()
+  (setq-default indent-tabs-mode nil)
+  (infer-indentation-style))
 
 (defun toggle-fullscreen ()
   (interactive)
@@ -33,3 +35,5 @@
 
 (when (version<= "26.0.50" emacs-version )
   (global-display-line-numbers-mode))
+
+(add-hook 'c-mode-common-hook 'my-c-mode-hook)
