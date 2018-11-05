@@ -18,5 +18,5 @@ alias gps="git push"
 alias gpl="git pull"
 
 # editor aliases
-alias e="emacs &"
+alias e="emacs --no-splash &"
 

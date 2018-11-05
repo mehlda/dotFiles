@@ -77,3 +77,10 @@
 
 ;; Corrects (and improves) org-mode's native fontification.
 (doom-themes-org-config)
+
+(setq inhibit-startup-screen t)
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+(defun setupFrame1 ()
+  (make-frame)
+  (make-frame)
+)
